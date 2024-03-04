@@ -1,0 +1,25 @@
+{%  extends 'index.html' %}
+
+{% block title %}
+Куртки
+{% endblock %}
+
+{% block content %}
+<h2>Наименование курток</h2>
+<table>
+    <tr>
+        <th>Марка</th>
+        <th>Сезон</th>
+        <th>Размер</th>
+        <th>Пол</th>
+    </tr>
+    {% for jacket in jackets %}
+    <tr>
+        <td>{{ jacket.brand }}</td>
+        <td>{{ jacket.season }}</td>
+        <td>{{ jacket.size }}</td>
+        <td>{{ jacket.gender }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
